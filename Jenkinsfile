@@ -7,7 +7,7 @@ pipeline {
 			
 			}
 		}
-		stages {
+
 		stage('Test'){
 			steps {
 		
@@ -15,7 +15,7 @@ pipeline {
 				
 			}
 		}
-		stages {
+
 		stage('Integration Test'){
 			steps {
 			
@@ -23,6 +23,7 @@ pipeline {
 			}
 		}
 	}
+	
 	post {
 		always {
 			echo 'Im awesome.i run always'
@@ -34,6 +35,4 @@ pipeline {
 			echo ' i run only when you fail'
 		}
 	}
-  }	
-}
-}
+  }

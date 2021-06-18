@@ -1,11 +1,37 @@
-node {
-	stage('Build') {
-		echo "Build"
+pipeline {
+	agent any
+	stages {
+		stage('Build'){
+			steps {
+				echo "Build"
+			
+			}
+		}
+		stages {
+		stage('Test'){
+			steps {
+		
+				echo "Test"
+				
+			}
+		}
+		stages {
+		stage('Integration Test'){
+			steps {
+			
+				echo "Integration Test"
+			}
+		}
 	}
-	stage('Test') {
-		echo "Test"
-	}
-	stage('Integration Test'){
-		echo "Test"
+	post {
+		always {
+			echo 'Im awesome.i run always'
+		}
+		success {
+			echo 'i run only when you are successful'
+		}
+		failure {
+			echo ' i run only when you fail'
+		}
 	}
 }

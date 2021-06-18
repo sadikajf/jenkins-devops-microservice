@@ -34,4 +34,6 @@ pipeline {
 			echo ' i run only when you fail'
 		}
 	}
+  }	
+}
 }
